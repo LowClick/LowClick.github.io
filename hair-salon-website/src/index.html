@@ -6,247 +6,248 @@
     <title>Hair Salon</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --main-bg: linear-gradient(135deg, #6e1834 0%, #b03a5b 100%);
-            --header-bg: #fff;
-            --card-bg: #fff;
-            --accent: #8b1e3f;
-            --accent-light: #b03a5b;
-            --accent-gradient: linear-gradient(135deg, #8b1e3f 0%, #b03a5b 100%);
-            --text-main: #2d0a18;
-            --text-light: #fff;
-            --shadow: 0 4px 24px rgba(139,30,63,0.10);
-            --gold: #ffd700;
-            --pink-glow: 0 0 18px #ffb6c1, 0 0 32px #b03a5b44;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-            background: var(--main-bg);
-            color: var(--text-main);
-            min-height: 100vh;
-        }
-        header {
-            background: var(--header-bg);
-            box-shadow: 0 2px 16px rgba(139,30,63,0.10);
-            padding: 44px 0 32px 0;
-            text-align: center;
-            border-bottom: 6px solid var(--accent);
-            position: relative;
-            z-index: 2;
-        }
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-        .logo-icon {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: var(--accent-gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.2rem;
-            color: var(--gold);
-            margin-bottom: 6px;
-            box-shadow: 0 6px 24px #b03a5b44, 0 0 0 8px #fff4;
-            filter: drop-shadow(0 0 16px #ffd70088);
-            animation: logo-pop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
-        }
-        @keyframes logo-pop {
-            0% { transform: scale(0.7); opacity: 0; }
-            80% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(1); }
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.7rem;
-            letter-spacing: 3px;
-            color: var(--accent);
-            font-weight: 700;
-            text-shadow: 0 4px 16px #b03a5b22, 0 1px 0 #fff;
+    :root {
+        --main-bg: linear-gradient(135deg, #6e1834 0%, #8b1e3f 100%);
+        --header-bg: #6e1834;
+        --card-bg: #8b1e3f;
+        --accent: #b03a5b;
+        --accent-light: #a02d4e;
+        --accent-gradient: linear-gradient(135deg, #8b1e3f 0%, #b03a5b 100%);
+        --text-main: #fff;
+        --text-light: #fff;
+        --shadow: 0 4px 24px rgba(139,30,63,0.18);
+        --gold: #a02d4e;
+        --pink-glow: 0 0 18px #b03a5b, 0 0 32px #6e183444;
+    }
+    body {
+        margin: 0;
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: var(--main-bg);
+        color: var(--text-main);
+        min-height: 100vh;
+    }
+    header {
+        background: var(--header-bg);
+        box-shadow: 0 2px 16px rgba(139,30,63,0.18);
+        padding: 44px 0 32px 0;
+        text-align: center;
+        border-bottom: 6px solid var(--accent);
+        position: relative;
+        z-index: 2;
+    }
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .logo-icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: var(--accent-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.2rem;
+        color: var(--text-light);
+        margin-bottom: 6px;
+        box-shadow: 0 6px 24px #b03a5b44, 0 0 0 8px #6e183444;
+        filter: drop-shadow(0 0 16px #8b1e3f88);
+        animation: logo-pop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes logo-pop {
+        0% { transform: scale(0.7); opacity: 0; }
+        80% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); }
+    }
+    h1 {
+        margin: 0;
+        font-size: 2.7rem;
+        letter-spacing: 3px;
+        color: var(--accent);
+        font-weight: 700;
+        text-shadow: 0 4px 16px #6e183422, 0 1px 0 #8b1e3f;
+    }
+    main {
+        max-width: 1050px;
+        margin: 56px auto 0 auto;
+        padding: 0 18px;
+    }
+    #services {
+        margin-bottom: 60px;
+    }
+    #services h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 12px #6e183422;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 40px;
+    }
+    .card {
+        background: var(--card-bg);
+        border-radius: 28px;
+        box-shadow: 0 8px 32px #6e183422, var(--shadow);
+        padding: 48px 28px 36px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.22s, box-shadow 0.22s, border 0.18s;
+        border: 2.5px solid transparent;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 28px;
+        background: linear-gradient(120deg, #b03a5b22 0%, #6e183400 100%);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .card:hover {
+        transform: translateY(-12px) scale(1.045);
+        box-shadow: 0 16px 48px #b03a5b33, 0 2px 16px #6e183433;
+        border-color: var(--accent);
+    }
+    .card-icon {
+        font-size: 3.6rem;
+        margin-bottom: 24px;
+        color: var(--accent-light);
+        z-index: 1;
+        filter: drop-shadow(0 2px 12px #b03a5b33);
+        transition: color 0.2s, filter 0.2s;
+    }
+    .card:hover .card-icon {
+        color: var(--accent);
+        filter: var(--pink-glow);
+    }
+    .card h3 {
+        margin: 0 0 14px 0;
+        font-size: 1.32rem;
+        color: var(--accent);
+        font-weight: 700;
+        z-index: 1;
+        letter-spacing: 1px;
+    }
+    .card p {
+        margin: 0;
+        color: #f8e6ed;
+        font-size: 1.09rem;
+        text-align: center;
+        z-index: 1;
+        line-height: 1.6;
+    }
+    #contact {
+        background: var(--card-bg);
+        border-radius: 24px;
+        box-shadow: 0 6px 24px #6e183422, var(--shadow);
+        padding: 44px 32px;
+        max-width: 540px;
+        margin: 0 auto 54px auto;
+        border-left: 8px solid var(--accent);
+        border-top: 2px solid var(--accent-light);
+        border-bottom: 2px solid var(--accent-light);
+        position: relative;
+    }
+    #contact::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 8px;
+        border-radius: 24px 0 0 24px;
+        background: linear-gradient(180deg, #b03a5b 0%, #6e1834 100%);
+        z-index: 0;
+    }
+    #contact h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 1.2px;
+    }
+    #contact p {
+        margin: 14px 0;
+        font-size: 1.12rem;
+        position: relative;
+        z-index: 1;
+    }
+    #contact a {
+        color: var(--accent-light);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.15s, text-shadow 0.15s;
+        text-shadow: 0 1px 8px #b03a5b44;
+    }
+    #contact a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+        text-shadow: 0 2px 12px #b03a5b88;
+    }
+    footer {
+        text-align: center;
+        padding: 24px 0;
+        background: var(--accent-gradient);
+        color: var(--text-light);
+        font-size: 1.09rem;
+        letter-spacing: 1.3px;
+        margin-top: 44px;
+        border-radius: 22px 22px 0 0;
+        box-shadow: 0 -4px 24px #6e183422;
+        position: relative;
+    }
+    footer::before {
+        content: "";
+        position: absolute;
+        left: 50%; top: 0;
+        transform: translateX(-50%);
+        width: 80px; height: 4px;
+        background: linear-gradient(90deg, #b03a5b 0%, #6e1834 100%);
+        border-radius: 2px;
+        margin-top: -12px;
+    }
+    @media (max-width: 900px) {
+        main { max-width: 98vw; }
+        .cards { gap: 24px; }
+    }
+    @media (max-width: 700px) {
+        .cards {
+            grid-template-columns: 1fr;
         }
         main {
-            max-width: 1050px;
-            margin: 56px auto 0 auto;
-            padding: 0 18px;
-        }
-        #services {
-            margin-bottom: 60px;
-        }
-        #services h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: var(--accent);
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 12px #b03a5b22;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 40px;
-        }
-        .card {
-            background: var(--card-bg);
-            border-radius: 28px;
-            box-shadow: 0 8px 32px #b03a5b22, var(--shadow);
-            padding: 48px 28px 36px 28px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.22s, box-shadow 0.22s, border 0.18s;
-            border: 2.5px solid transparent;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 28px;
-            background: linear-gradient(120deg, #ffd70022 0%, #fff0 100%);
-            z-index: 0;
-            pointer-events: none;
-        }
-        .card:hover {
-            transform: translateY(-12px) scale(1.045);
-            box-shadow: 0 16px 48px #b03a5b33, 0 2px 16px #ffd70033;
-            border-color: var(--gold);
-        }
-        .card-icon {
-            font-size: 3.6rem;
-            margin-bottom: 24px;
-            color: var(--accent-light);
-            z-index: 1;
-            filter: drop-shadow(0 2px 12px #b03a5b33);
-            transition: color 0.2s, filter 0.2s;
-        }
-        .card:hover .card-icon {
-            color: var(--gold);
-            filter: var(--pink-glow);
-        }
-        .card h3 {
-            margin: 0 0 14px 0;
-            font-size: 1.32rem;
-            color: var(--accent);
-            font-weight: 700;
-            z-index: 1;
-            letter-spacing: 1px;
-        }
-        .card p {
-            margin: 0;
-            color: #5a2a3c;
-            font-size: 1.09rem;
-            text-align: center;
-            z-index: 1;
-            line-height: 1.6;
+            padding: 0 6px;
         }
         #contact {
-            background: var(--card-bg);
-            border-radius: 24px;
-            box-shadow: 0 6px 24px #b03a5b22, var(--shadow);
-            padding: 44px 32px;
-            max-width: 540px;
-            margin: 0 auto 54px auto;
-            border-left: 8px solid var(--gold);
-            border-top: 2px solid var(--accent-light);
-            border-bottom: 2px solid var(--accent-light);
-            position: relative;
+            padding: 24px 10px;
         }
-        #contact::before {
-            content: "";
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 8px;
-            border-radius: 24px 0 0 24px;
-            background: linear-gradient(180deg, #ffd700 0%, #b03a5b 100%);
-            z-index: 0;
-        }
-        #contact h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 24px;
-            color: var(--accent);
-            font-weight: 700;
-            letter-spacing: 1.2px;
-        }
-        #contact p {
-            margin: 14px 0;
-            font-size: 1.12rem;
-            position: relative;
-            z-index: 1;
-        }
-        #contact a {
-            color: var(--accent-light);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.15s, text-shadow 0.15s;
-            text-shadow: 0 1px 8px #ffd70044;
-        }
-        #contact a:hover {
-            color: var(--gold);
-            text-decoration: underline;
-            text-shadow: 0 2px 12px #ffd70088;
-        }
-        footer {
-            text-align: center;
-            padding: 24px 0;
-            background: var(--accent-gradient);
-            color: var(--text-light);
-            font-size: 1.09rem;
-            letter-spacing: 1.3px;
-            margin-top: 44px;
-            border-radius: 22px 22px 0 0;
-            box-shadow: 0 -4px 24px #b03a5b22;
-            position: relative;
-        }
-        footer::before {
-            content: "";
-            position: absolute;
-            left: 50%; top: 0;
-            transform: translateX(-50%);
-            width: 80px; height: 4px;
-            background: linear-gradient(90deg, #ffd700 0%, #b03a5b 100%);
-            border-radius: 2px;
-            margin-top: -12px;
-        }
-        @media (max-width: 900px) {
-            main { max-width: 98vw; }
-            .cards { gap: 24px; }
-        }
-        @media (max-width: 700px) {
-            .cards {
-                grid-template-columns: 1fr;
-            }
-            main {
-                padding: 0 6px;
-            }
-            #contact {
-                padding: 24px 10px;
-            }
-        }
-        @media (max-width: 480px) {
-            header { padding: 28px 0 18px 0; }
-            .logo-icon { width: 64px; height: 64px; font-size: 2.1rem; }
-            h1 { font-size: 1.5rem; }
-            #services h2 { font-size: 1.2rem; }
-            .card { padding: 28px 10px 18px 10px; }
-            #contact { padding: 16px 4px; }
-            footer { font-size: 0.95rem; }
-        }
-    </style>
+    }
+    @media (max-width: 480px) {
+        header { padding: 28px 0 18px 0; }
+        .logo-icon { width: 64px; height: 64px; font-size: 2.1rem; }
+        h1 { font-size: 1.5rem; }
+        #services h2 { font-size: 1.2rem; }
+        .card { padding: 28px 10px 18px 10px; }
+        #contact { padding: 16px 4px; }
+        footer { font-size: 0.95rem; }
+    }
+</style>
+
 </head>
 <body>
     <header>
         <div class="logo">
             <div class="logo-icon">✂️</div>
-            <h1>Hair Salon</h1>
+            <h1>Парикмахерская</h1>
         </div>
     </header>
     <main>
@@ -282,8 +283,5 @@
             <p><strong>Время работы:</strong> Пн–Сб: 9:00–20:00, Вс: выходной</p>
         </section>
     </main>
-    <footer>
-        &copy; 2023 Hair Salon. Все права защищены.
-    </footer>
 </body>
 </html>
